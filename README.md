@@ -14,3 +14,15 @@ Basic knowledge of HTML and CSS
 Git installed on your machine
 
 for my project, I used VS code
+
+
+Installation
+
+Clone the repository to your local machine:
+
+git clone https://github.com/username/portfolio.git
+
+Navigate to the project directory: cd portfolio
+
+Open the index.html file in a web browser to view the project.
+Download the live server extension on vs code to view website 
