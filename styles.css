@@ -1,3 +1,7 @@
+
+
+
+
 :root {
 --primary-color: #f97316;
 --secondary-color:  #7da7d9;
@@ -22,6 +26,8 @@ body {
     flex-direction: column;
     gap: 72px;
     padding: 14px;
+    
+
     
 
 }
@@ -230,3 +236,4 @@ width: 80%;
 margin-right: auto;
 
 }
+

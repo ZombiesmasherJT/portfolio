@@ -16,6 +16,10 @@
 
     <script src="https://kit.fontawesome.com/01116b4018.js" crossorigin="anonymous"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
         <header>
@@ -27,32 +31,31 @@
                 <a class="darkerText" href="https://drive.google.com/file/d/1MQZHQbG5q1EtRf-aQ-eUYAzaZBqbEQLB/view?usp=sharing" target="_blank">CV</a>
                 <i class="fa-brands fa-linkedin"></i>
                 <a class="darkerText" href="https://www.linkedin.com/in/joshuatite/" target="_blank">Linkedin</a>
+                <a class="darkerText" href="Updatelog.html">UpdateLog</a>
             </nav>
         </header>
-    <main>
+    <main>  
     <section>
-
     <div class="nameContainer">
             <h1>Joshua Tite</h1>
             <p class="darkerText">I go to Brighton university and code projects</p>
         </div>
         <div class="statsContainer">   
         <div class="imgContainer">
-            <img src="https://media.licdn.com/dms/image/D4E03AQEj90QVyqEgDw/profile-displayphoto-shrink_200_200/0/1693591196484?e=1711584000&v=beta&t=4Ugm_-lwuJoBKXCEqh2bVV8X9QGP7Hoqt49GxFFOvKI" alt="profile image">
+            <img src="https://media.licdn.com/dms/image/D4E03AQEj90QVyqEgDw/profile-displayphoto-shrink_400_400/0/1693591196484?e=1718236800&v=beta&t=ly39yMSZIZ7PFJC3jW0EgriHHLLmK4fzo04Mx93GYZk" alt="profile image">
         </div>
         <div class="stats">   
             <div>
                 <i class="fa-brands fa-github"></i>
-            <p class="darkerText">8 Github repos</p>
+                <p class="darkerText">Github repos: <span id="githubRepos">Loading...</span></p>
              </div>
-
             <div>
                 <i class="fa-solid fa-arrow-trend-up"></i>
-            <p class="darkerText">6 Commits this year</p>
+                <p class="darkerText">11 Commits this year</p>
             </div>
             <div>
                 <i class="fa-solid fa-plus"></i>
-            <p class="darkerText">4 Followers</p>
+                <p class="darkerText">Followers: <span id="githubFollowers">Loading...</span></p>
             </div>
          </div>
         </div>
@@ -68,28 +71,23 @@
     </section>
         <section class="projectContainer">
             <p class="darkerText headerText">Latest projects</p>
-            <div class="projectItem">
+            <div class="projectItem" data-aos="fade-in" data-aos-duration="400">
                 <div>
                     <p class="darkerText"> jan 9, 2024</p>
-                    <p>FunctionalAssigment is a university register that can query students using many functions</p>
+                    <p>FunctionalAssigment is a university register that can query students using many functions.</p>
                 </div>
                 <div>
                     <a href="https://github.com/ZombiesmasherJT/FunctionalProject/tree/master" target="_blank"><img src="/public/Functional programming.png" alt="FunctionalAssigment-img"></a>
                 </div>
             </div>
-        <div class="projectItem">
+        <div class="projectItem"  data-aos="fade-up" data-aos-duration="400">
             <div>
                 <p class="darkerText"> jan 29, 2024</p>
-                <p>Catshop is an online shopping system that allows users to check for items they want to buy to see if its in stock and buy as much of the selected product as they chose</p>
+                <p>Catshop is an online retail platform that enables customers to check the availability of desired items and purchase any quantity of the available products.</p>
             </div>
-
                 <div>
                    <a href="https://github.com/ZombiesmasherJT/Object-orientated-programming-additions." target="_blank"><img src="/public/OO Additions.png" alt="Catshop-img"></a>
-
-                   *// test test
                 </div>
-
-
             </div>
             <div class="projectItem">
                 <div>
@@ -98,10 +96,23 @@
                 </div>
 
                 <div>
-                    <a href="https://shylexx.com/" target="_blank"><img src="/public/ATMM.png" alt="ATM fucntiionality"></a>
+                    <a href="https://github.com/ZombiesmasherJT/Year-one-ATM" target="_blank"><img src="/public/ATMM.png" alt="ATM fucntiionality"></a>
                 </div>
             </div>
+
+            <div class="projectItem">
+                <div>
+                    <p class="darkerText"> Feb 9, 2024</p>
+                    <p>this is the repository of my simple portfolio website code which I plan to update using dev tools and frameworks.</p>
+                </div>
+
+                <div>
+                    <a href="https://github.com/ZombiesmasherJT/portfolio" target="_blank"><img src="/public/Picture9.png" alt="ATM fucntiionality"></a>
+                </div>
+            </div>
+
         </section>
    </main>
+   <script src="script.js"></script>
 </body>
-</html>
+</html
