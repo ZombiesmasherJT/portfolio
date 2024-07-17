@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
               // Initialize Typed.js for each project description
               new Typed(`#project-description-${index}`, {
                   strings: [project.description],
-                  typeSpeed: 30,
+                  typeSpeed: 17,
                   showCursor: false
               });
           });
