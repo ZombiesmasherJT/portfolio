@@ -1,6 +1,10 @@
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 
+import Projects from "./components/Projects.jsx";
+
+
+
 function App() {
   return (
     <>
@@ -9,6 +13,7 @@ function App() {
         <h1>new tech stack update</h1>
         <p>Transfroming my digital portfolio</p>
       </main>
+      <Projects />
     </>
   );
 }
