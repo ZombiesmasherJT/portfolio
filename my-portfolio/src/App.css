@@ -143,3 +143,10 @@ a:hover {
     height: 120px;
   }
 }
+
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}

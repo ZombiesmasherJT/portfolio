@@ -5,28 +5,50 @@
       "description": "Catshop is an online retail platform that enables customers to check the availability of desired items and purchase any quantity of the available products.",
       "image": "public/OO Additions.png",
       "date": "2024-01-29",
-      "link": "https://github.com/ZombiesmasherJT/your-catshop-repo"
+      "link": "https://github.com/ZombiesmasherJT/your-catshop-repo",
+      "tools": [
+        "java",
+        "swing"
+      ],
+      "status": "Completed"
     },
     {
       "title": "Functional Assignment",
       "description": "FunctionalAssignment is a university register that can query students using many functions such as making a function that querys a student based of their age.",
       "image": "public/Functional programming.png",
       "date": "2024-01-09",
-      "link": "https://github.com/ZombiesmasherJT/your-functional-assignment-repo"
+      "link": "https://github.com/ZombiesmasherJT/your-functional-assignment-repo",
+      "tools": [
+        "java",
+        "functional programming"
+      ],
+      "status": "Completed"
     },
     {
       "title": "YearoneATM",
       "description": "YearOne ATM is an online ATM java application that allows users to withdraw money from a bank account and be able to go into an arranged overdraft.",
       "image": "public/ATMM.png",
       "date": "2023-05-13",
-      "link": "https://github.com/ZombiesmasherJT/your-yearoneatm-repo"
+      "link": "https://github.com/ZombiesmasherJT/your-yearoneatm-repo",
+      "tools": [
+        "java",
+        "swing"
+      ],
+      "status": "Completed"
     },
     {
       "title": "Portfolio",
       "description": "This is the repository of my simple portfolio website code which I plan to update using dev tools and frameworks.",
       "image": "public/Picture9.png",
       "date": "2024-05-13",
-      "link": "https://github.com/ZombiesmasherJT/your-portfolio-repo"
+      "link": "https://github.com/ZombiesmasherJT/your-portfolio-repo",
+      "tools": [
+        "React",
+        "html",
+        "css",
+        "javascript"
+      ],
+      "status": "In progress"
     }
   ]
 }

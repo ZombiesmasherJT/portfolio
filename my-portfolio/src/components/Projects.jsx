@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
+
 function Projects() {
     const [projects, setProjects] = useState([]);
+    const [filterStatus, setFilterStatus] = useState("all");
 
     useEffect(() => {
         fetch("/portfolio.json")
@@ -11,10 +13,27 @@ function Projects() {
 
     }, []);
 
+    const filteredProjects = projects.filter((project) => {
+        return filterStatus === "all" || project.status === filterStatus;
+    });
+
+
+
     return (
         <section className="projectContainer">
+            <div className="filter">
+                <label>filter by status</label>
+
+                <select onChange={(e) => setFilterStatus(e.target.value)}>
+                    <option value="all">All</option>
+                    <option value="Completed">Completed</option>
+                    <option value="In progress">In Progress</option>
+
+                </select>
+            </div>
+
             <h2 className="headerText">Latest Projects</h2>
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
                 <div className="projectItem" key={index}>
                     <div>
                         <span className="darkerText">{new Date(project.date).toDateString()}</span>
@@ -32,6 +51,5 @@ function Projects() {
         </section>
     );
 }
-
 
 export default Projects;
