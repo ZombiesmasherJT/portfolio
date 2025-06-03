@@ -32,23 +32,23 @@ function Projects() {
                 </select>
             </div>
 
-            <h2 className="headerText">Latest Projects</h2>
-            {filteredProjects.map((project, index) => (
-                <div className="projectItem" key={index}>
-                    <div>
-                        <span className="darkerText">{new Date(project.date).toDateString()}</span>
-                        <h2>{project.title}</h2>
-                        <p className="darkerText">{project.description}</p>
-                        <a href={project.link} target="_blank" rel="noreferrer" className="outreach">
-                            View Code
-                        </a>
+            <div className="projectsGrid">
+                {filteredProjects.map((project, index) => (
+                    <div className="projectCard" key={index}>
+                        <img src={project.image} alt={project.title} className="projectImage" />
+                        <div className="projectContent">
+                            <span className="projectDate">{new Date(project.date).toDateString()}</span>
+                            <h3>{project.title}</h3>
+                            <p>{project.description}</p>
+                            <a href={project.link} target="_blank" rel="noreferrer" className="outreach">
+                                View Code
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        <img src={project.image} alt={project.title} />
-                    </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </section>
+
     );
 }
 
