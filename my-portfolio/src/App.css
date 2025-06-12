@@ -196,3 +196,38 @@ a:hover {
   margin-bottom: 0.5rem;
   display: block;
 }
+
+
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.skill-level {
+  font-size: 0.9rem;
+  color: #aaa;
+}
