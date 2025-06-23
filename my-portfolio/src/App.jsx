@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar.jsx";
-import "./App.css";
+import Hero from "./components/Hero.jsx";
 import Projects from "./components/Projects.jsx";
 import Skills from "./components/Skills.jsx";
+import "./App.css";
 import React from "react";
 
 
@@ -14,6 +15,7 @@ function App() {
         <h1>new tech stack update</h1>
         <p>Transfroming my digital portfolio</p>
       </main>
+      <Hero />
       <Projects />
       <Skills />
     </>
