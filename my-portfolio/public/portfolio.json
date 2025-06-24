@@ -49,6 +49,23 @@
         "javascript"
       ],
       "status": "In progress"
+    },
+    {
+      "title": "Hotel booking and management system",
+      "description": "Wanderstays is a hotel booking and management system that allows users to book rooms, manage reservations, and handle customer inquiries. Also allows for hotel management to manage rooms, view bookings, and handle customer requests.",
+      "image": "public/Diss image.png",
+      "date": "2025-05-02",
+      "link": "https://github.com/ZombiesmasherJT/hotel-booking-management-system",
+      "tools": [
+        "React",
+        "html",
+        "css",
+        "javascript",
+        "Node.js",
+        "Express.js",
+        "MySQL"
+      ],
+      "status": "Completed"
     }
   ]
 }

@@ -204,6 +204,13 @@ a:hover {
   text-align: center;
 }
 
+.skills-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
 .skill-card {
   background: var(--card-bg);
   padding: 1rem;
