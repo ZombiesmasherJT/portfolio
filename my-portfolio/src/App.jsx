@@ -3,7 +3,10 @@ import Hero from "./components/Hero.jsx";
 import Projects from "./components/Projects.jsx";
 import Skills from "./components/Skills.jsx";
 import "./App.css";
+import "./components/About.jsx";
 import React from "react";
+import About from "./components/About.jsx";
+import Footer from "./components/footer.jsx";
 
 
 
@@ -16,8 +19,10 @@ function App() {
         <p>Transfroming my digital portfolio</p>
       </main>
       <Hero />
+      <About />
       <Projects />
       <Skills />
+      <Footer />
     </>
   );
 }
