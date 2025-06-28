@@ -66,6 +66,20 @@
         "MySQL"
       ],
       "status": "Completed"
+    },
+    {
+      "title": "Market-basket analysis",
+      "description": "Market Basket Analysis using Python, pandas, and mlxtend. Uncovers frequent itemsets and association rules from grocery transaction data. Includes visualizations.",
+      "image": "public/Lift.png",
+      "date": "2025-05-19",
+      "link": "https://github.com/ZombiesmasherJT/hotel-booking-management-system",
+      "tools": [
+        "python",
+        "mlxtend",
+        "pandas",
+        "Apriori algorithm"
+      ],
+      "status": "Completed"
     }
   ]
 }

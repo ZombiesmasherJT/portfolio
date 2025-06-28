@@ -1,22 +1,45 @@
 .footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 2rem 1rem;
-    text-align: center;
-    font-size: 0.9rem;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 3rem;
 }
 
-.footer-socials {
-    margin-top: 1rem;
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 1.5rem;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1 1 300px;
+}
+
+.footer-left h3,
+.footer-right h3 {
+    color: #ff7f0e;
+    /* Your orange accent */
+    margin-bottom: 0.5rem;
 }
 
 .footer-socials a {
-    color: var(--text-color);
-    margin: 0 0.5rem;
-    text-decoration: none;
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+    color: #ff7f0e;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
 }
