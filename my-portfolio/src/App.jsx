@@ -7,6 +7,7 @@ import "./components/About.jsx";
 import React from "react";
 import About from "./components/About.jsx";
 import Footer from "./components/footer.jsx";
+import Contact from "./components/Contact.jsx";
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <About />
       <Projects />
       <Skills />
+      <Contact />
       <Footer />
     </>
   );
