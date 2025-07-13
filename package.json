@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "vite-plugin-radar": "^0.10.0"
   }
 }
