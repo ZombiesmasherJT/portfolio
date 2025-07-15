@@ -1,6 +1,6 @@
 import React from 'react';
 import '../About.css';
-import notionImg from '../assets/notion.jpg';
+import notionImg from '../assets/web immmm.jpg';
 
 
 
