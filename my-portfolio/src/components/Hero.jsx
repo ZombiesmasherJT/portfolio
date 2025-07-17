@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import notionImage from "../assets/notion.jpg";
+import notionImage from "../assets/greece hero image.jpg";
 
 function Hero() {
     return (

@@ -13,17 +13,24 @@ function About() {
                     className="about-img"
                 />
                 <div className='about-text'>
-                    <h2 className='about-title'>Hi, im Josh</h2>
+                    <h2 className='about-title'>Hi, Im Josh</h2>
 
                     <p className='about-description'>
 
-                        I am a software engineer with a passion for building web applications and learning new technologies. I have experience in full-stack development, including front-end frameworks like React and back-end technologies like Node.js. I love solving problems and creating efficient, user-friendly solutions.
+                        I am a recent graduate with a passion for building web applications and learning new technologies. I have experience in full-stack development, including front-end frameworks like React and back-end technologies like Node.js. I love solving problems and creating efficient, user-friendly solutions.
                     </p>
 
                     <p className='about-description'>
                         In my free time, I enjoy exploring new programming languages, contributing to open-source projects,
                         and staying up-to-date with the latest trends in web development. I believe in continuous learning and strive to improve my skills every day.
                     </p>
+
+                    <a href="/Joshua Tite CV - Copy.docx" download>
+                        <button className="cv-button">Download CV</button>
+                    </a>
+
+
+
                 </div>
 
             </div>
