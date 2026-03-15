@@ -10,9 +10,9 @@
 }
 
 .navbar-container {
-  max-width: 1100px;
+  max-width: var(--content-max, 1100px);
   margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem var(--section-padding-x, 1.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,6 +84,7 @@
 }
 
 .navbar-menu a {
+  position: relative;
   font-weight: 500;
   font-size: 0.95rem;
   color: var(--text-muted);
@@ -95,6 +96,22 @@
   color: var(--accent);
 }
 
+.navbar-menu a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.navbar-menu a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
 @media (max-width: 768px) {
   .navbar-toggle {
     display: flex;
@@ -102,7 +119,7 @@
 
   .navbar-menu {
     position: fixed;
-    top: 57px;
+    top: 53px;
     left: 0;
     right: 0;
     bottom: 0;

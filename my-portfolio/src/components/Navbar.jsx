@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useScrollSpy } from "../hooks/useScrollSpy";
 import "../navbar.css";
+
+const NAV_LINKS = [
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#certs", label: "Certs" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const activeId = useScrollSpy();
 
   useEffect(() => {
     if (menuOpen) document.body.style.overflow = "hidden";
@@ -11,6 +20,8 @@ export default function Navbar() {
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+
+  const isActive = (href) => activeId === href.slice(1);
 
   return (
     <nav className="navbar">
@@ -30,10 +41,17 @@ export default function Navbar() {
           <span className={menuOpen ? "open" : ""} />
         </button>
         <ul className={`navbar-menu ${menuOpen ? "open" : ""}`}>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-          <li><a href="#certs" onClick={closeMenu}>Certs</a></li>
-          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+          {NAV_LINKS.map(({ href, label }) => (
+            <li key={href}>
+              <a
+                href={href}
+                onClick={closeMenu}
+                className={isActive(href) ? "active" : ""}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

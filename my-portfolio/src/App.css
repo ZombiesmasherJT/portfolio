@@ -19,6 +19,11 @@
   --transition: 0.2s ease;
   --animate-duration: 0.5s;
   --animate-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Scaling: content width and section padding scale with viewport */
+  --content-max: 1100px;
+  --section-padding-x: 1.5rem;
+  --section-padding-y: 5rem;
+  --hero-padding-y: 4rem;
 }
 
 /* ========== Scroll-triggered animations ========== */
@@ -69,6 +74,7 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   padding-top: 72px;
+  overflow-x: hidden;
 }
 
 a {
@@ -81,11 +87,12 @@ a:hover {
   color: var(--accent-hover);
 }
 
-/* Section container */
+/* Section container — uses scaling variables */
 .section {
-  max-width: 1100px;
+  max-width: var(--content-max);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--section-padding-x);
+  min-width: 0;
 }
 
 .section-title {
@@ -147,7 +154,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem;
+  padding: var(--hero-padding-y) var(--section-padding-x);
   overflow: hidden;
 }
 
@@ -159,6 +166,55 @@ a:hover {
     radial-gradient(ellipse 60% 40% at 100% 50%, rgba(99, 102, 241, 0.08), transparent),
     radial-gradient(ellipse 50% 30% at 0% 80%, rgba(245, 158, 11, 0.06), transparent);
   pointer-events: none;
+}
+
+/* Animated gradient blobs */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+  animation: blobFloat 18s ease-in-out infinite;
+}
+
+.hero-blob-1 {
+  width: min(60vw, 400px);
+  height: min(60vw, 400px);
+  background: var(--accent);
+  top: -10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.hero-blob-2 {
+  width: min(50vw, 320px);
+  height: min(50vw, 320px);
+  background: rgba(99, 102, 241, 0.6);
+  bottom: -5%;
+  right: -5%;
+  animation-delay: -6s;
+}
+
+.hero-blob-3 {
+  width: min(40vw, 260px);
+  height: min(40vw, 260px);
+  background: var(--accent-hover);
+  top: 50%;
+  left: 50%;
+  animation: blobFloatCenter 18s ease-in-out infinite;
+  animation-delay: -12s;
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes blobFloatCenter {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
 }
 
 .hero-inner {
@@ -240,9 +296,50 @@ a:hover {
   justify-content: center;
 }
 
+.hero-metrics {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.hero-metrics-dot {
+  opacity: 0.5;
+  user-select: none;
+}
+
+/* Button glow on hover */
+.btn-glow {
+  position: relative;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.35);
+}
+
+.btn-secondary.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+/* ========== Section divider ========== */
+.section-divider {
+  height: 1px;
+  max-width: var(--content-max);
+  margin: 2rem auto;
+  padding: 0 var(--section-padding-x);
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  opacity: 0.5;
+}
+
 /* ========== Projects ========== */
 .projectContainer {
-  padding: 5rem 1.5rem;
+  padding: var(--section-padding-y) var(--section-padding-x);
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 .filter {
@@ -321,11 +418,12 @@ a:hover {
 
 .projectsGrid {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1rem, 3vw, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 }
 
 .projectCard {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--bg-card);
@@ -355,6 +453,7 @@ a:hover {
 
 .projectImageWrap {
   width: 100%;
+  min-width: 0;
   aspect-ratio: 16 / 10;
   background: var(--bg-elevated);
   overflow: hidden;
@@ -367,6 +466,7 @@ a:hover {
   object-fit: cover;
   object-position: top center;
   display: block;
+  max-width: 100%;
 }
 
 .projectImagePlaceholder {
@@ -446,15 +546,15 @@ a:hover {
 
 /* ========== Skills ========== */
 .skills-section {
-  padding: 5rem 1.5rem;
+  padding: var(--section-padding-y) var(--section-padding-x);
   background: var(--bg-elevated);
 }
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.25rem;
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  max-width: min(800px, 100%);
   margin: 0 auto;
   text-align: center;
 }
@@ -526,4 +626,90 @@ a:hover {
 .tooltip-container:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+/* ========== Scaling & responsive ========== */
+
+/* Small screens — comfortable padding, single-column friendly */
+@media (max-width: 480px) {
+  :root {
+    --section-padding-x: 1rem;
+    --section-padding-y: 3.5rem;
+    --hero-padding-y: 2.5rem;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+  }
+
+  .projectContent {
+    padding: 1rem;
+  }
+
+  .projectLink,
+  .filter-pill {
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Tablet and up — standard scale */
+@media (min-width: 768px) {
+  :root {
+    --section-padding-y: 4.5rem;
+  }
+}
+
+/* Desktop — wider content, more breathing room */
+@media (min-width: 1024px) {
+  :root {
+    --content-max: 1280px;
+    --section-padding-x: 2rem;
+    --section-padding-y: 5.5rem;
+    --hero-padding-y: 5rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+/* Large desktop — max scale */
+@media (min-width: 1280px) {
+  :root {
+    --content-max: 1400px;
+    --section-padding-x: 2.5rem;
+    --section-padding-y: 6rem;
+    --hero-padding-y: 5.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+}
+
+/* Touch devices — larger tap targets */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .projectLink,
+  .filter-pill,
+  .navbar-menu a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-menu a {
+    padding: 0.5rem 1rem;
+  }
 }

@@ -1,14 +1,14 @@
 #contact {
-  padding: 5rem 1.5rem;
+  padding: var(--section-padding-y, 5rem) var(--section-padding-x, 1.5rem);
   background: var(--bg-elevated);
 }
 
 .contact-container {
-  max-width: 520px;
+  max-width: min(520px, 100%);
   margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  padding: 2rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
