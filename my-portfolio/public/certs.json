@@ -5,7 +5,7 @@
       "title": "Software Engineering Essentials",
       "issuer": "Coursera",
       "date": "2025-08-01",
-      "image": "/pending.png",
+      "image": "/Software.png",
       "url": "",
       "credentialId": "",
       "skills": ["Git", "GitHub"]
@@ -15,8 +15,8 @@
       "title": "Introduction to Software Development",
       "issuer": "Amazon",
       "date": "2025-07-01",
-      "image": "",
-      "url": "",
+      "image": "/Amazon.png",
+      "url": "https://coursera.org/share/30dd5c848d0fd868880fb91f248ac74d",
       "credentialId": "OR144XX1SPQH",
       "skills": ["Git", "GitHub"]
     },

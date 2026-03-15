@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "title": "AI Phone Assistant",
+      "description": "An intelligent AI-powered phone assistant that handles calls, takes messages, and more using natural language processing. Includes Twilio voice handling, Google Calendar integration, and appointment management. Built with Gemini and deployed at Vetra.",
+      "image": "/Vet.png",
+      "date": "2025-03-01",
+      "link": "https://github.com/VetraTD/ai-phone-assistant",
+      "demo": "https://www.vetratd.com",
+      "tools": [
+        "AI",
+        "NLP",
+        "Twilio",
+        "Google Calendar",
+        "Node.js"
+      ],
+      "status": "Completed"
+    },
+    {
       "title": "Catshop",
       "description": "Catshop is an online retail platform that enables customers to check the availability of desired items and purchase any quantity of the available products.",
       "image": "/OO Additions.png",
@@ -42,6 +58,7 @@
       "image": "/Picture9.png",
       "date": "2024-05-13",
       "link": "https://github.com/ZombiesmasherJT/your-portfolio-repo",
+      "demo": "https://joshgt.com",
       "tools": [
         "React",
         "html",

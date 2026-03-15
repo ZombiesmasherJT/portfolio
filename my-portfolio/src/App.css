@@ -353,11 +353,37 @@ a:hover {
   color: var(--accent);
 }
 
+.projectImageWrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-elevated);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
 .projectImage {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  background: var(--bg-elevated);
+  object-position: top center;
+  display: block;
+}
+
+.projectImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(99, 102, 241, 0.1) 100%);
+}
+
+.projectImagePlaceholder span {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.9;
 }
 
 .projectContent {
@@ -365,6 +391,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
 }
 
 .projectDate {
@@ -376,12 +404,44 @@ a:hover {
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.5;
+  flex: 1;
 }
 
-.projectContent .outreach {
-  margin-top: 0.5rem;
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.projectLink {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.projectLinkPrimary {
+  background: var(--accent);
+  color: #0c0f14;
+}
+
+.projectLinkPrimary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.projectLinkSecondary {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.projectLinkSecondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* ========== Skills ========== */

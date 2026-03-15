@@ -56,11 +56,20 @@ function Projects() {
         <div className="projectsGrid animate-stagger">
           {filteredProjects.map((project) => (
             <article className="projectCard" key={project.title}>
-              <img
-                src={imageSrc(project.image)}
-                alt=""
-                className="projectImage"
-              />
+              <div className="projectImageWrap">
+                {imageSrc(project.image) ? (
+                  <img
+                    src={imageSrc(project.image)}
+                    alt=""
+                    className="projectImage"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="projectImagePlaceholder">
+                    <span>{project.title?.charAt(0) || "?"}</span>
+                  </div>
+                )}
+              </div>
               <div className="projectContent">
                 <span className="projectDate">
                   {project.date
@@ -79,14 +88,26 @@ function Projects() {
                     ))}
                   </div>
                 )}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="outreach"
-                >
-                  View code →
-                </a>
+                <div className="projectLinks">
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="projectLink projectLinkPrimary"
+                    >
+                      Live demo
+                    </a>
+                  )}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="projectLink projectLinkSecondary"
+                  >
+                    View code
+                  </a>
+                </div>
               </div>
             </article>
           ))}
