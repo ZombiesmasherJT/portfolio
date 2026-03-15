@@ -1,24 +1,29 @@
 import React from "react";
-import "../App.css";
-import notionImage from "../assets/greece hero image.jpg";
 
 function Hero() {
-    return (
-        <section
-            className="hero"
-            style={{
-                backgroundImage: `url(${notionImage})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-        >
-            <div className="hero-content">
-                <h1>Joshua Tite</h1>
-                <p>Solving your software solutions</p>
-
-            </div>
-        </section>
-    );
+  return (
+    <section className="hero" id="home">
+      <div className="hero-bg" aria-hidden="true" />
+      <div className="hero-inner">
+        <p className="hero-label">Developer · Builder</p>
+        <h1 className="hero-title">
+          <span className="hero-title-line">Joshua</span>
+          <span className="hero-title-line hero-title-accent">Tite</span>
+        </h1>
+        <p className="hero-tagline">
+          Solving your software solutions — full-stack focus, user-first results.
+        </p>
+        <div className="hero-cta">
+          <a href="#projects" className="btn btn-primary">
+            View work
+          </a>
+          <a href="#contact" className="btn btn-secondary">
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Hero;
