@@ -1,68 +1,99 @@
 import { useEffect, useState } from "react";
+import { useInView } from "../hooks/useInView";
+
+const STATUS_OPTIONS = [
+  { value: "all", label: "All" },
+  { value: "Completed", label: "Completed" },
+  { value: "In progress", label: "In progress" },
+];
 
 function Projects() {
-    const [projects, setProjects] = useState([]);
-    const [filterStatus, setFilterStatus] = useState("all");
+  const [ref, inView] = useInView();
+  const [projects, setProjects] = useState([]);
+  const [filterStatus, setFilterStatus] = useState("all");
 
-    useEffect(() => {
-        fetch("/portfolio.json")
-            .then((response) => response.json())
-            .then((data) => setProjects(data.projects))
-            .catch((error) => console.error("Error fetching projects:", error));
-    }, []);
+  useEffect(() => {
+    fetch("/portfolio.json")
+      .then((res) => res.json())
+      .then((data) => setProjects(data.projects || []))
+      .catch(() => setProjects([]));
+  }, []);
 
-    const filteredProjects = projects.filter((project) => {
-        return filterStatus === "all" || project.status === filterStatus;
-    });
+  const filteredProjects = projects.filter(
+    (p) => filterStatus === "all" || p.status === filterStatus
+  );
 
-    return (
-        <section className="projectContainer section" id="projects">
-            <h2 className="section-title">Projects</h2>
-            <p className="section-subtitle">A few things I’ve been working on recently</p>
+  const imageSrc = (src) => {
+    if (!src) return "";
+    return src.replace(/^public\//, "/");
+  };
 
-            <div className="filter">
-                <label htmlFor="statusFilter">Filter by status:</label>
-                <select
-                    id="statusFilter"
-                    onChange={(e) => setFilterStatus(e.target.value)}
+  return (
+    <section
+      ref={ref}
+      className={`projectContainer section section-animate ${inView ? "in-view" : ""}`}
+      id="projects"
+    >
+      <h2 className="section-title">Projects</h2>
+      <p className="section-subtitle">Things I've been building</p>
+
+      <div className="filter filter-pills">
+        {STATUS_OPTIONS.map((opt) => (
+          <button
+            key={opt.value}
+            type="button"
+            className={`filter-pill ${filterStatus === opt.value ? "active" : ""}`}
+            onClick={() => setFilterStatus(opt.value)}
+          >
+            {opt.label}
+          </button>
+        ))}
+      </div>
+
+      {filteredProjects.length === 0 ? (
+        <p className="projects-empty">No projects in this filter yet.</p>
+      ) : (
+        <div className="projectsGrid animate-stagger">
+          {filteredProjects.map((project) => (
+            <article className="projectCard" key={project.title}>
+              <img
+                src={imageSrc(project.image)}
+                alt=""
+                className="projectImage"
+              />
+              <div className="projectContent">
+                <span className="projectDate">
+                  {project.date
+                    ? new Date(project.date).toLocaleDateString("en-GB", {
+                        month: "short",
+                        year: "numeric",
+                      })
+                    : ""}
+                </span>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.tools && project.tools.length > 0 && (
+                  <div className="projectTools">
+                    {project.tools.slice(0, 4).map((t) => (
+                      <span key={t} className="projectTool">{t}</span>
+                    ))}
+                  </div>
+                )}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="outreach"
                 >
-                    <option value="all">All</option>
-                    <option value="Completed">Completed</option>
-                    <option value="In progress">In Progress</option>
-                </select>
-            </div>
-
-            <div className="projectsGrid">
-                {filteredProjects.map((project, index) => (
-                    <div className="projectCard" key={index}>
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="projectImage"
-                        />
-                        <div className="projectContent">
-                            <span className="projectDate">
-                                {new Date(project.date).toDateString()}
-                            </span>
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
-
-
-
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="outreach"
-                            >
-                                View Code
-                            </a>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </section>
-    );
+                  View code →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+  );
 }
 
 export default Projects;

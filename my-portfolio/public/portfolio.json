@@ -3,7 +3,7 @@
     {
       "title": "Catshop",
       "description": "Catshop is an online retail platform that enables customers to check the availability of desired items and purchase any quantity of the available products.",
-      "image": "public/OO Additions.png",
+      "image": "/OO Additions.png",
       "date": "2024-01-29",
       "link": "https://github.com/ZombiesmasherJT/your-catshop-repo",
       "tools": [
@@ -15,7 +15,7 @@
     {
       "title": "Functional Assignment",
       "description": "FunctionalAssignment is a university register that can query students using many functions such as making a function that querys a student based of their age.",
-      "image": "public/Functional programming.png",
+      "image": "/Functional programming.png",
       "date": "2024-01-09",
       "link": "https://github.com/ZombiesmasherJT/your-functional-assignment-repo",
       "tools": [
@@ -27,7 +27,7 @@
     {
       "title": "YearoneATM",
       "description": "YearOne ATM is an online ATM java application that allows users to withdraw money from a bank account and be able to go into an arranged overdraft.",
-      "image": "public/ATMM.png",
+      "image": "/ATMM.png",
       "date": "2023-05-13",
       "link": "https://github.com/ZombiesmasherJT/your-yearoneatm-repo",
       "tools": [
@@ -39,7 +39,7 @@
     {
       "title": "Portfolio",
       "description": "This is the repository of my simple portfolio website code which I plan to update using dev tools and frameworks.",
-      "image": "public/Picture9.png",
+      "image": "/Picture9.png",
       "date": "2024-05-13",
       "link": "https://github.com/ZombiesmasherJT/your-portfolio-repo",
       "tools": [
@@ -53,7 +53,7 @@
     {
       "title": "Hotel booking and management system",
       "description": "Wanderstays is a hotel booking and management system that allows users to book rooms, manage reservations, and handle customer inquiries. Also allows for hotel management to manage rooms, view bookings, and handle customer requests.",
-      "image": "public/Diss image.png",
+      "image": "/Diss image.png",
       "date": "2025-05-02",
       "link": "https://github.com/ZombiesmasherJT/hotel-booking-management-system",
       "tools": [
@@ -70,7 +70,7 @@
     {
       "title": "Market-basket analysis",
       "description": "Market Basket Analysis using Python, pandas, and mlxtend. Uncovers frequent itemsets and association rules from grocery transaction data. Includes visualizations.",
-      "image": "public/Lift.png",
+      "image": "/Lift.png",
       "date": "2025-05-19",
       "link": "https://github.com/ZombiesmasherJT/hotel-booking-management-system",
       "tools": [

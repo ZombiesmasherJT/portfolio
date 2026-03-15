@@ -1,4 +1,11 @@
 {
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix my-portfolio",
+    "build": "npm run build --prefix my-portfolio",
+    "preview": "npm run preview --prefix my-portfolio"
+  },
   "dependencies": {
     "react-icons": "^5.5.0"
   },

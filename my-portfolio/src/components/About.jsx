@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useInView } from "../hooks/useInView";
 import "../About.css";
 
 function About() {
   const [photoLoaded, setPhotoLoaded] = useState(true);
+  const [ref, inView] = useInView();
   return (
-    <section className="about section" id="about">
+    <section ref={ref} className={`about section section-animate ${inView ? "in-view" : ""}`} id="about">
       <div className={`about-container ${!photoLoaded ? "no-photo" : ""}`}>
         <div className="about-text">
           <h2 className="about-title">Hi, I'm Josh</h2>

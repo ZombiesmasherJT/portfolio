@@ -1,0 +1,55 @@
+{
+  "certs": [
+    {
+      "id": "software-engineering-essentials",
+      "title": "Software Engineering Essentials",
+      "issuer": "Coursera",
+      "date": "2025-08-01",
+      "image": "/pending.png",
+      "url": "",
+      "credentialId": "",
+      "skills": ["Git", "GitHub"]
+    },
+    {
+      "id": "intro-software-development",
+      "title": "Introduction to Software Development",
+      "issuer": "Amazon",
+      "date": "2025-07-01",
+      "image": "",
+      "url": "",
+      "credentialId": "OR144XX1SPQH",
+      "skills": ["Git", "GitHub"]
+    },
+    {
+      "id": "prompt-engineering-chatgpt",
+      "title": "Prompt Engineering for ChatGPT",
+      "issuer": "Vanderbilt University",
+      "date": "2025-07-01",
+      "image": "/Prompt.png",
+      "url": "https://coursera.org/share/62f91f539020f8a0c7eaadc43aa922dc",
+      "credentialId": "I7JOGBXAPMG6",
+      "skills": []
+    },
+    {
+      "id": "Nist",
+      "title": "Fundamentals of digital marketing",
+      "issuer": "packt",
+      "date": "2025-07-01",
+      "image": "/Nist.png",
+      "url": "https://coursera.org/share/33fd09e5d540f0c558aca1fe5bc04f1f",
+      "credentialId": "",
+      "skills": []
+    },
+    {
+      "id": "google-analytics-certification",
+      "title": "Google Analytics Certification",
+      "issuer": "Skillshop",
+      "date": "2025-07-01",
+      "expires": "2026-07-01",
+      "image": "",
+      "url": "",
+      "credentialId": "154051724",
+      "skills": []
+    }
+  ]
+}

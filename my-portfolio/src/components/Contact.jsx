@@ -1,16 +1,14 @@
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
-import '../contact.css';
-
-
-
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import { useInView } from "../hooks/useInView";
+import "../contact.css";
 
 function ContactForm() {
     const [state, handleSubmit] = useForm("mrbkjlod");
-
+    const [ref, inView] = useInView();
 
     return (
-        <section id="contact">
+        <section ref={ref} className={`section-animate ${inView ? "in-view" : ""}`} id="contact">
             <div className="contact-container">
                 <h2 className="contact-heading">Let's Connect</h2>
                 {state.succeeded ? (

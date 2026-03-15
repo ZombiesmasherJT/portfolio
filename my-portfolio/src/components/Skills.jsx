@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { useInView } from "../hooks/useInView";
 import {
     DiHtml5,
     DiCss3,
@@ -20,8 +21,9 @@ const skills = [
 ];
 
 function Skills() {
+    const [ref, inView] = useInView();
     return (
-        <section className="skills-section">
+        <section ref={ref} className={`skills-section section-animate ${inView ? "in-view" : ""}`}>
             <h2 className="skills-title">Skills</h2>
             <div className="skills-container">
                 {skills.map((skill, index) => {
