@@ -6,7 +6,7 @@ import "./App.css";
 import "./components/About.jsx";
 import React from "react";
 import About from "./components/About.jsx";
-import Footer from "./components/footer.jsx";
+import Footer from "./components/Footer.jsx";
 import Contact from "./components/Contact.jsx";
 
 
