@@ -16,7 +16,7 @@ function ContactForm() {
                 {state.succeeded ? (
                     <div className="success-message">
                         <h3>Thanks for reaching out!</h3>
-                        <p>Ill get back to you as soon as I can</p>
+                        <p>I'll get back to you as soon as I can.</p>
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit}>

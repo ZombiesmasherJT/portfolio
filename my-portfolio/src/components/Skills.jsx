@@ -10,13 +10,13 @@ import {
 } from "react-icons/di";
 
 const skills = [
-    { name: "HTML", level: "Intermediate", icon: DiHtml5, tooltip: "2 years experince" },
-    { name: "CSS", level: "Intermediate", icon: DiCss3, tooltip: "2 years experince" },
+    { name: "HTML", level: "Intermediate", icon: DiHtml5, tooltip: "2 years experience" },
+    { name: "CSS", level: "Intermediate", icon: DiCss3, tooltip: "2 years experience" },
     { name: "JavaScript", level: "Intermediate", icon: DiJavascript1 },
     { name: "React", level: "Intermediate", icon: DiReact },
     { name: "Node.js", level: "Intermediate", icon: DiNodejs },
     { name: "Git", level: "Intermediate", icon: DiGit },
-    { name: "Python", level: "Intermediate", icon: DiPython, tooltip: "2 years experince" }
+    { name: "Python", level: "Intermediate", icon: DiPython, tooltip: "2 years experience" }
 ];
 
 function Skills() {
@@ -29,7 +29,7 @@ function Skills() {
                     return (
                         <div className="skill-card" key={index}>
                             <div className="tooltip-container">
-                                <IconComponent size={40} classname="skill-icon" />
+                                <IconComponent size={40} className="skill-icon" />
                                 {skill.tooltip && (
                                     <span className="tooltip-text">{skill.tooltip}</span>
 

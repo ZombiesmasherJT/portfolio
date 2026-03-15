@@ -1,45 +1,64 @@
 .footer {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem 3rem;
+  background: var(--bg);
+  color: var(--text);
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid var(--border);
 }
 
 .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-    border-bottom: 1px solid #444;
-    padding-bottom: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .footer-left,
 .footer-right {
-    flex: 1 1 300px;
+  flex: 1 1 280px;
 }
 
 .footer-left h3,
 .footer-right h3 {
-    color: #ff7f0e;
-    /* Your orange accent */
-    margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
 }
 
 .footer-socials a {
-    color: white;
-    margin-right: 1rem;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+  color: var(--text-muted);
+  font-size: 1.35rem;
+  transition: color var(--transition), transform var(--transition);
 }
 
 .footer-socials a:hover {
-    color: #ff7f0e;
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-    color: #aaa;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
