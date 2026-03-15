@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <main id="main-content">
       <Hero />
       <div className="section-divider" />
       <About />
@@ -25,6 +26,7 @@ function App() {
       <div className="section-divider" />
       <Contact />
       <Footer />
+      </main>
     </>
   );
 }

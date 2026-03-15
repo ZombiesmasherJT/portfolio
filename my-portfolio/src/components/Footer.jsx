@@ -45,6 +45,7 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <p>© {new Date().getFullYear()} Joshua Tite. All rights reserved.</p>
+                <p className="footer-a11y">Built with accessibility in mind — skip link, focus states, semantic HTML.</p>
             </div>
         </footer>
     );

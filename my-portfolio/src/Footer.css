@@ -77,3 +77,12 @@
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+.footer-bottom p + p {
+  margin-top: 0.5rem;
+}
+
+.footer-a11y {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}

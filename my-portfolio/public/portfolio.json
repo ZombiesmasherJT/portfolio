@@ -4,16 +4,19 @@
       "title": "AI Phone Assistant",
       "description": "An intelligent AI-powered phone assistant that handles calls, takes messages, and more using natural language processing. Includes Twilio voice handling, Google Calendar integration, and appointment management. Built with Gemini and deployed at Vetra.",
       "image": "/Vet.png",
-      "date": "2025-03-01",
+      "date": "2026-03-09",
       "link": "https://github.com/VetraTD/ai-phone-assistant",
       "demo": "https://www.vetratd.com",
-      "tools": [
-        "AI",
-        "NLP",
-        "Twilio",
-        "Google Calendar",
-        "Node.js"
-      ],
+      "impact": "Live in production at Vetra · Twilio + Gemini",
+      "featured": true,
+      "caseStudy": {
+        "problem": "Vetra needed a way to handle inbound calls intelligently — take messages, check availability, and book appointments without human staff always on the line.",
+        "techStackReason": "Twilio for reliable voice; Gemini for natural language understanding; Node.js for one language across the stack and fast iteration.",
+        "challenges": "Mapping free-form speech to calendar actions, handling edge cases in conversation flow, and keeping latency low for a good caller experience.",
+        "myRole": "Built the voice pipeline, Gemini integration, and Google Calendar sync; deployed and maintained in production.",
+        "futureImprovements": "Multi-language support, richer analytics on call outcomes, and optional human handoff for complex requests."
+      },
+      "tools": ["AI", "NLP", "Twilio", "Google Calendar", "Node.js"],
       "status": "Completed"
     },
     {
@@ -53,35 +56,21 @@
       "status": "Completed"
     },
     {
-      "title": "Portfolio",
-      "description": "This is the repository of my simple portfolio website code which I plan to update using dev tools and frameworks.",
-      "image": "/Picture9.png",
-      "date": "2024-05-13",
-      "link": "https://github.com/ZombiesmasherJT/your-portfolio-repo",
-      "demo": "https://joshgt.com",
-      "tools": [
-        "React",
-        "html",
-        "css",
-        "javascript"
-      ],
-      "status": "In progress"
-    },
-    {
       "title": "Hotel booking and management system",
       "description": "Wanderstays is a hotel booking and management system that allows users to book rooms, manage reservations, and handle customer inquiries. Also allows for hotel management to manage rooms, view bookings, and handle customer requests.",
       "image": "/Diss image.png",
       "date": "2025-05-02",
       "link": "https://github.com/ZombiesmasherJT/hotel-booking-management-system",
-      "tools": [
-        "React",
-        "html",
-        "css",
-        "javascript",
-        "Node.js",
-        "Express.js",
-        "MySQL"
-      ],
+      "impact": "Full-stack · React + Node + Express + MySQL",
+      "featured": true,
+      "caseStudy": {
+        "problem": "Hotels and guests needed a single place to search availability, book rooms, and manage reservations without back-and-forth emails or phone calls.",
+        "techStackReason": "React for a fast, responsive UI; Node + Express for a simple, scalable API; MySQL for reliable relational data (rooms, bookings, users).",
+        "challenges": "Keeping booking state consistent, handling concurrent bookings for the same room, and a clear admin flow for hotel staff.",
+        "myRole": "Designed and built the full stack: React front end, REST API, database schema, and auth for guests and admins.",
+        "futureImprovements": "Payment integration (e.g. Stripe), email confirmations, and a dashboard for occupancy and revenue."
+      },
+      "tools": ["React", "Node.js", "Express.js", "MySQL"],
       "status": "Completed"
     },
     {
@@ -89,13 +78,20 @@
       "description": "Market Basket Analysis using Python, pandas, and mlxtend. Uncovers frequent itemsets and association rules from grocery transaction data. Includes visualizations.",
       "image": "/Lift.png",
       "date": "2025-05-19",
-      "link": "https://github.com/ZombiesmasherJT/hotel-booking-management-system",
-      "tools": [
-        "python",
-        "mlxtend",
-        "pandas",
-        "Apriori algorithm"
-      ],
+      "link": "https://github.com/ZombiesmasherJT/market-basket-analysis",
+      "featured": true,
+      "tools": ["Python", "pandas", "mlxtend", "Apriori"],
+      "status": "Completed"
+    },
+    {
+      "title": "Portfolio",
+      "description": "This site — React, Vite, responsive layout, accessibility-first. Built with clean structure and performance in mind.",
+      "image": "/Port.png",
+      "date": "2024-05-13",
+      "link": "https://github.com/ZombiesmasherJT/your-portfolio-repo",
+      "demo": "https://joshgt.com",
+      "featured": true,
+      "tools": ["React", "Vite", "CSS", "JavaScript"],
       "status": "Completed"
     }
   ]

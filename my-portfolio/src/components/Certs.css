@@ -39,6 +39,10 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
 }
 
+.cert-card--in-progress {
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
 .cert-image-wrap {
   aspect-ratio: 16 / 10;
   background: var(--bg-elevated);
@@ -60,6 +64,11 @@
   font-weight: 700;
   color: var(--accent);
   opacity: 0.9;
+  display: none;
+}
+
+.cert-initial.visible {
+  display: block;
 }
 
 .cert-content {
@@ -77,25 +86,66 @@
 .cert-issuer {
   font-size: 0.9rem;
   color: var(--text-muted);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
-.cert-date {
+/* In progress: just progress bar + % + est. date */
+.cert-progress-wrap {
+  margin-top: 0.5rem;
+}
+
+.cert-progress-bar-wrap {
+  height: 6px;
+  background: var(--bg-elevated);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.35rem;
+}
+
+.cert-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width var(--transition);
+}
+
+.cert-progress-pct {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+
+.cert-estimated {
   font-size: 0.8rem;
   color: var(--text-muted);
-  margin-bottom: 0.35rem;
+  margin: 0;
+}
+
+/* Completed: date, credential, skills, links */
+.cert-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
 }
 
 .cert-credential-id {
   font-size: 0.75rem;
   color: var(--text-muted);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
 .cert-skills {
   font-size: 0.8rem;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
+}
+
+.cert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .cert-link {

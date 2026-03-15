@@ -11,6 +11,7 @@ function ContactForm() {
         <section ref={ref} className={`section-animate ${inView ? "in-view" : ""}`} id="contact">
             <div className="contact-container">
                 <h2 className="contact-heading">Let's Connect</h2>
+                <p className="contact-intro">Open to software engineer roles. Drop a message below or reach out at <a href="mailto:joshua.tite@me.com">joshua.tite@me.com</a>.</p>
                 {state.succeeded ? (
                     <div className="success-message">
                         <h3>Thanks for reaching out!</h3>

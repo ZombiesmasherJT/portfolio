@@ -17,16 +17,19 @@ function Hero() {
       <div className="hero-blob hero-blob-2" aria-hidden="true" />
       <div className="hero-blob hero-blob-3" aria-hidden="true" />
       <div className="hero-inner">
-        <p className="hero-label">Developer · Builder</p>
+        <p className="hero-label">Full-stack developer</p>
         <h1 className="hero-title">
           <span className="hero-title-line">Joshua</span>
           <span className="hero-title-line hero-title-accent">Tite</span>
         </h1>
         <p className="hero-tagline">
-          Solving your software solutions — full-stack focus, user-first results.
+          I ship production systems — React, Node.js, clean architecture. Built AI in production at Vetra. Focused on scale, clarity, and impact.
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="btn btn-primary btn-glow">
+          <a href="/Joshua Tite CV - Copy.docx" download className="btn btn-primary btn-glow">
+            Download resume
+          </a>
+          <a href="#projects" className="btn btn-secondary btn-glow">
             View work
           </a>
           <a href="#contact" className="btn btn-secondary btn-glow">
@@ -34,11 +37,11 @@ function Hero() {
           </a>
         </div>
         <div className="hero-metrics">
+          <a href="#contact" className="hero-cta-pill">Available for hire</a>
+          <span className="hero-metrics-dot">·</span>
           <span>{metrics.projects || "—"} Projects</span>
           <span className="hero-metrics-dot">·</span>
           <span>{metrics.certs || "—"} Certifications</span>
-          <span className="hero-metrics-dot">·</span>
-          <span>Available for work</span>
         </div>
       </div>
     </section>

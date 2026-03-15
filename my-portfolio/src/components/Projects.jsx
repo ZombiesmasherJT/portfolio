@@ -7,16 +7,28 @@ const STATUS_OPTIONS = [
   { value: "In progress", label: "In progress" },
 ];
 
+const CASE_STUDY_LABELS = {
+  problem: "The problem",
+  techStackReason: "Why this stack",
+  challenges: "Challenges",
+  myRole: "My role",
+  futureImprovements: "Future improvements",
+};
+
 function Projects() {
   const [ref, inView] = useInView();
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [filterStatus, setFilterStatus] = useState("all");
+  const [openCaseStudy, setOpenCaseStudy] = useState(null);
 
   useEffect(() => {
+    setLoading(true);
     fetch("/portfolio.json")
       .then((res) => res.json())
       .then((data) => setProjects(data.projects || []))
-      .catch(() => setProjects([]));
+      .catch(() => setProjects([]))
+      .finally(() => setLoading(false));
   }, []);
 
   const filteredProjects = projects.filter(
@@ -35,7 +47,7 @@ function Projects() {
       id="projects"
     >
       <h2 className="section-title">Projects</h2>
-      <p className="section-subtitle">Things I've been building</p>
+      <p className="section-subtitle">3–5 polished projects — live demos, clean code, and case studies</p>
 
       <div className="filter filter-pills">
         {STATUS_OPTIONS.map((opt) => (
@@ -50,12 +62,17 @@ function Projects() {
         ))}
       </div>
 
-      {filteredProjects.length === 0 ? (
+      {loading ? (
+        <p className="projects-loading">Loading projects…</p>
+      ) : filteredProjects.length === 0 ? (
         <p className="projects-empty">No projects in this filter yet.</p>
       ) : (
         <div className="projectsGrid animate-stagger">
           {filteredProjects.map((project) => (
             <article className="projectCard" key={project.title}>
+              {project.featured && (
+                <span className="projectFeaturedBadge" aria-hidden="true">Featured</span>
+              )}
               <div className="projectImageWrap">
                 {imageSrc(project.image) ? (
                   <img
@@ -80,6 +97,9 @@ function Projects() {
                     : ""}
                 </span>
                 <h3>{project.title}</h3>
+                {project.impact && (
+                  <p className="projectImpact" aria-hidden="true">{project.impact}</p>
+                )}
                 <p>{project.description}</p>
                 {project.tools && project.tools.length > 0 && (
                   <div className="projectTools">
@@ -87,6 +107,38 @@ function Projects() {
                       <span key={t} className="projectTool">{t}</span>
                     ))}
                   </div>
+                )}
+                {project.caseStudy && typeof project.caseStudy === "object" && (
+                  <div className="projectCaseStudyWrap">
+                    <button
+                      type="button"
+                      className="projectCaseStudyToggle"
+                      onClick={() => setOpenCaseStudy(openCaseStudy === project.title ? null : project.title)}
+                      aria-expanded={openCaseStudy === project.title}
+                    >
+                      {openCaseStudy === project.title ? "Hide case study" : "View case study"}
+                    </button>
+                    {openCaseStudy === project.title && (
+                      <div className="projectCaseStudy">
+                        {Object.entries(project.caseStudy).map(([key, value]) => (
+                          <div key={key} className="projectCaseStudyItem">
+                            <strong>{CASE_STUDY_LABELS[key] || key}</strong>
+                            <p>{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+                {project.caseStudy && typeof project.caseStudy === "string" && (
+                  <a
+                    href={project.caseStudy}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="projectLink projectLinkSecondary"
+                  >
+                    Read case study
+                  </a>
                 )}
                 <div className="projectLinks">
                   {project.demo && (

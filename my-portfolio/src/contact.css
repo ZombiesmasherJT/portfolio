@@ -19,7 +19,24 @@
   font-weight: 700;
   color: var(--text);
   text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.contact-intro {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.contact-intro a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-intro a:hover {
+  text-decoration: underline;
 }
 
 .contact-container form label {

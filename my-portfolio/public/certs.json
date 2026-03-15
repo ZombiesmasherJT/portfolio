@@ -1,6 +1,32 @@
 {
   "certs": [
     {
+      "id": "ibm-fullstack-js",
+      "title": "IBM Full-Stack JavaScript Developer",
+      "issuer": "IBM",
+      "date": null,
+      "image": "/IBM.png",
+      "url": "",
+      "credentialId": "",
+      "skills": ["JavaScript", "Node.js", "React", "Full-stack"],
+      "status": "in_progress",
+      "progress": 40,
+      "estimatedCompletion": "2026-04-01"
+    },
+    {
+      "id": "ibm-ethical-hacking",
+      "title": "IBM Ethical Hacking with Open Source Tools",
+      "issuer": "IBM",
+      "date": null,
+      "image": "/IBM.png",
+      "url": "",
+      "credentialId": "",
+      "skills": ["Ethical Hacking", "Kali Linux", "Metasploit", "Wireshark", "OpenVAS"],
+      "status": "in_progress",
+      "progress": 78,
+      "estimatedCompletion": "2026-03-13"
+    },
+    {
       "id": "software-engineering-essentials",
       "title": "Software Engineering Essentials",
       "issuer": "Coursera",
@@ -8,7 +34,8 @@
       "image": "/Software.png",
       "url": "",
       "credentialId": "",
-      "skills": ["Git", "GitHub"]
+      "skills": ["Git", "GitHub"],
+      "status": "completed"
     },
     {
       "id": "intro-software-development",
@@ -18,7 +45,8 @@
       "image": "/Amazon.png",
       "url": "https://coursera.org/share/30dd5c848d0fd868880fb91f248ac74d",
       "credentialId": "OR144XX1SPQH",
-      "skills": ["Git", "GitHub"]
+      "skills": ["Git", "GitHub"],
+      "status": "completed"
     },
     {
       "id": "prompt-engineering-chatgpt",
@@ -28,7 +56,8 @@
       "image": "/Prompt.png",
       "url": "https://coursera.org/share/62f91f539020f8a0c7eaadc43aa922dc",
       "credentialId": "I7JOGBXAPMG6",
-      "skills": []
+      "skills": [],
+      "status": "completed"
     },
     {
       "id": "Nist",
@@ -38,7 +67,8 @@
       "image": "/Nist.png",
       "url": "https://coursera.org/share/33fd09e5d540f0c558aca1fe5bc04f1f",
       "credentialId": "",
-      "skills": []
+      "skills": [],
+      "status": "completed"
     },
     {
       "id": "google-analytics-certification",
@@ -49,7 +79,8 @@
       "image": "",
       "url": "",
       "credentialId": "154051724",
-      "skills": []
+      "skills": [],
+      "status": "completed"
     }
   ]
 }

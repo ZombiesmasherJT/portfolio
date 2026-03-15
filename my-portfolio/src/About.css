@@ -26,7 +26,14 @@
   font-size: clamp(1.75rem, 4vw, 2.25rem);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-career-focus {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1rem;
 }
 
 .about-description {
@@ -38,6 +45,25 @@
 
 .about-description:last-of-type {
   margin-bottom: 1.5rem;
+}
+
+.about-what-i-do {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.about-bullets {
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.about-bullets li {
+  margin-bottom: 0.35rem;
 }
 
 .cv-link {
