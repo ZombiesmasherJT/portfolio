@@ -7,7 +7,9 @@ import {
     DiReact,
     DiNodejs,
     DiPython,
-    DiGit
+    DiGit,
+    DiMysql,
+    DiJava
 } from "react-icons/di";
 
 const skills = [
@@ -16,8 +18,11 @@ const skills = [
     { name: "JavaScript", level: "Intermediate", icon: DiJavascript1 },
     { name: "React", level: "Intermediate", icon: DiReact },
     { name: "Node.js", level: "Intermediate", icon: DiNodejs },
-    { name: "Git", level: "Intermediate", icon: DiGit },
-    { name: "Python", level: "Intermediate", icon: DiPython, tooltip: "2 years experience" }
+    { name: "Express.js", level: "Intermediate", icon: DiNodejs },
+    { name: "Python", level: "Intermediate", icon: DiPython, tooltip: "2 years experience" },
+    { name: "Java", level: "Intermediate", icon: DiJava },
+    { name: "MySQL", level: "Intermediate", icon: DiMysql },
+    { name: "Git", level: "Intermediate", icon: DiGit }
 ];
 
 function Skills() {
