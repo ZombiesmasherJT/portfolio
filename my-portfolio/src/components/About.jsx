@@ -31,7 +31,7 @@ function About() {
           <div className="about-visual">
             <div className="about-img-wrap">
               <img
-                src="/me.png"
+                src="/mee.png"
                 alt="Joshua Tite"
                 className="about-img"
                 onError={() => setPhotoLoaded(false)}
