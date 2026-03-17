@@ -19,8 +19,21 @@ export function ThemeProvider({ children }) {
   });
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    const root = document.documentElement;
+    // Add a short-lived class so CSS can animate the theme swap.
+    root.classList.add("theme-transition");
+    // Force style recalc so the class takes effect before variables swap.
+    // eslint-disable-next-line no-unused-expressions
+    root.offsetHeight;
+
+    root.setAttribute("data-theme", theme);
     localStorage.setItem(THEME_KEY, theme);
+
+    const t = window.setTimeout(() => {
+      root.classList.remove("theme-transition");
+    }, 320);
+
+    return () => window.clearTimeout(t);
   }, [theme]);
 
   const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));

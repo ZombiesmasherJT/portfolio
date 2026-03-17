@@ -17,7 +17,23 @@
         "futureImprovements": "Multi-language support, richer analytics on call outcomes, and optional human handoff for complex requests."
       },
       "tools": ["AI", "NLP", "Twilio", "Google Calendar", "Node.js"],
-      "status": "Completed"
+      "status": "In progress"
+    },
+    {
+      "title": "NeighbourNetk",
+      "description": "A full-stack community support platform that allows users to request help and volunteers to respond. Built with React, Node.js, and SQL.",
+      "date": "2026-03-16",
+      "link": "https://github.com/joshtite/NeighbourNetk",
+      "impact": "Role-aware flows · request → volunteer response",
+      "caseStudy": {
+        "problem": "This started from something I saw at my local club: people were always asking for help (lifts, picking something up, quick favours), but it lived across WhatsApp threads and it was easy for requests to get missed or duplicated.",
+        "techStackReason": "I went with React because I wanted a fast, clean UI that works on mobile. Node.js kept the backend simple to iterate on, and SQL made the request/response state easy to reason about (who asked, who accepted, what’s still open).",
+        "challenges": "The tricky part wasn’t the CRUD — it was the flow: making it obvious what a volunteer can do vs a requester, and keeping the status changes sane so you don’t end up with two people “accepting” the same request.",
+        "myRole": "I built it end-to-end: the role-aware screens, the API, and the database structure for users, requests, and responses. I also tuned the UI so you can scan what’s open and act quickly.",
+        "futureImprovements": "Add notifications so volunteers don’t have to refresh, basic admin/mod tools for the club, and a lightweight way to tag requests (e.g. ‘lift’, ‘errand’, ‘check-in’) to filter the feed."
+      },
+      "tools": ["React", "Node.js", "SQL"],
+      "status": "In progress"
     },
     {
       "title": "Catshop",

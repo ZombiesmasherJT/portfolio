@@ -31,7 +31,13 @@ function Projects() {
       .finally(() => setLoading(false));
   }, []);
 
-  const filteredProjects = projects.filter(
+  const sortedProjects = [...projects].sort((a, b) => {
+    const aTime = a?.date ? new Date(a.date).getTime() : 0;
+    const bTime = b?.date ? new Date(b.date).getTime() : 0;
+    return bTime - aTime;
+  });
+
+  const filteredProjects = sortedProjects.filter(
     (p) => filterStatus === "all" || p.status === filterStatus
   );
 
@@ -72,6 +78,14 @@ function Projects() {
             <article className="projectCard" key={project.title}>
               {project.featured && (
                 <span className="projectFeaturedBadge" aria-hidden="true">Featured</span>
+              )}
+              {project.status && project.status !== "Completed" && (
+                <span
+                  className={`projectStatusBadge ${project.status === "In progress" ? "is-in-progress" : ""}`}
+                  aria-label={`Status: ${project.status}`}
+                >
+                  {project.status}
+                </span>
               )}
               <div className="projectImageWrap">
                 {imageSrc(project.image) ? (
