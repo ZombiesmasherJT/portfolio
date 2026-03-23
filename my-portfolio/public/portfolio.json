@@ -36,6 +36,24 @@
       "status": "In progress"
     },
     {
+      "title": "Internet Guardian AI",
+      "description": "A web audit tool that scans a URL and returns practical security, performance, and SEO findings using Cloudflare APIs through a wrapper service.",
+      "image": "/UI.png",
+      "date": "2026-03-17",
+      "link": "https://github.com/joshtite",
+      "demo": "https://e793b3f8.cf-ai-internet-guardian.pages.dev/",
+      "impact": "Cloudflare-powered audits · security + performance + SEO in one view",
+      "caseStudy": {
+        "problem": "I wanted a quick way to check real website health in one place instead of jumping across separate tools for security, speed, and SEO basics.",
+        "techStackReason": "React made it easy to build a simple results-first UI, and using Cloudflare through a wrapper gave me cleaner inputs/outputs and faster iteration while wiring scan data to the front end.",
+        "challenges": "Normalizing mixed scan responses into one readable summary and deciding what to show first so users get signal quickly, not just a wall of metrics.",
+        "myRole": "Built the front-end flow (URL input -> scan -> results), integrated the API wrapper, and shaped the output into actionable sections for Security, Performance, and SEO.",
+        "futureImprovements": "Add scan history, trend comparison between scans, richer scoring, and export/share options for reports."
+      },
+      "tools": ["React", "Node.js", "Cloudflare", "API Wrapper"],
+      "status": "In progress"
+    },
+    {
       "title": "Catshop",
       "description": "Catshop is an online retail platform that enables customers to check the availability of desired items and purchase any quantity of the available products.",
       "image": "/OO Additions.png",
